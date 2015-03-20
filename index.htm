@@ -1,29 +1,46 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Device Properties Example</title>
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Victory Worship Center</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="vwc.css" rel="stylesheet" type="text/css">
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        var element = document.getElementById('deviceProperties');
-        element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
-                            'Device Cordova: '  + device.cordova  + '<br />' +
-                            'Device Platform: ' + device.platform + '<br />' +
-                            'Device UUID: '     + device.uuid     + '<br />' +
-                            'Device Version: '  + device.version  + '<br />';
-    }
-
-    </script>
-  </head>
-  <body>
-    <p id="deviceProperties">Loading device properties...</p>
-  </body>
+</head>
+<body onLoad="MM_preloadImages('pics/wbrbutton.jpg','pics/wwsbutton.jpg','pics/wcubutton.jpg')">
+	<div class="gridContainer clearfix">
+		<div id="div1" class="center"><img src="pics/logo2.jpg" alt=""/></div>
+	</div><br>
+    <div class="gridContainer clearfix">
+    <div id="div1" class="center2"><a href="http://www.vicworship.org/biblereadplan.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','pics/wbrbutton.jpg',1)"><img id="Image3" src="pics/mbrbutton.jpg" alt="Daily Reading"></a> <a href="http://www.vicworship.com" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','pics/wwsbutton.jpg',1)"><img id="Image4" src="pics/mwsbutton.jpg" alt="Got to Our Site."></a> <a href="mcontact.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','pics/wcubutton.jpg',1)"><img id="Image5" src="pics/mcubutton.jpg" alt=""></a></div>
+    </div>
+    <div class="gridContainer clearfix">
+    <div id="div1" class="center">Welcome to VWC's app. Our Sunday service videos are shown in the video room. Go to our contact page to call us or send us a message from our contact room.</div><br></div>
+<div class="gridContainer clearfix">
+    <div id="div1" class="centerdisplay">
+    <a href="mvideo.htm" target="_blank"><img src="pics/videobutton.jpg" alt=""/> </a><br>
+    <a href="sms:444"><img src="pics/msgbutton.jpg" alt=""/></a></div>
+    
+    
+	
+</body>
 </html>
