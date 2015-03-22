@@ -24,9 +24,31 @@ Do the following if you're using your customized build of modernizr (http://www.
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <script src="respond.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+        element.innerHTML = 'Device Name: '     + device.name     + '<br />' +
+                            'Device Cordova: '  + device.cordova  + '<br />' +
+                            'Device Platform: ' + device.platform + '<br />' +
+                            'Device UUID: '     + device.uuid     + '<br />' +
+                            'Device Model: '    + device.model    + '<br />' +
+                            'Device Version: '  + device.version  + '<br />';
+    }
+
+    </script>
 
 </head>
 <body onLoad="MM_preloadImages('pics/wbrbutton.jpg','pics/wwsbutton.jpg','pics/wcubutton.jpg')">
+<p id="deviceProperties">Loading device properties...</p>
+
 	<div class="gridContainer clearfix">
 		<div id="div1" class="center"><img src="pics/logo2.jpg" alt=""/></div>
 	</div><br>
