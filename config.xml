@@ -19,7 +19,8 @@
 15     <author href="http://www.vicworship.org" email="webmaster@vicworship.org"> 
 16         Wayne Wedge 
 17     </author> 
-18 
+18 <content src="index.html" />
+
  
 19     <!-- 
 20         If you do not want any permissions to be added to your app, add the 
